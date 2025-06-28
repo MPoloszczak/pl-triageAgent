@@ -1,0 +1,40 @@
+# Exclude git history and CI files
+.git/
+.github/
+
+# Exclude local env & secrets
+.env
+.env.*
+
+# Exclude development artifacts & caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.mypy_cache/
+.pytest_cache/
+.cache/
+
+# Exclude IDE/editor config
+.idea/
+.vscode/
+*.code-workspace
+
+# Exclude build outputs & virtual environments
+dist/
+build/
+.eggs/
+*.egg-info/
+.venv/
+venv/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Docker ignore itself can remain
+.env.example

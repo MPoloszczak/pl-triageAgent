@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  triage-agent:
+    build:
+      context: ./triage-agent
+    container_name: triage-agent
+    ports:
+      - "8000:8000"
+    environment:
+      - GH_TOKEN=${GH_TOKEN}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - REPO_OWNER=${REPO_OWNER}
+      - REPO_NAME=${REPO_NAME}
+      - CONF_THRESHOLD=${CONF_THRESHOLD:-0.8}
+      # Optional OpenSearch
+      - OPENSEARCH_HOST=${OPENSEARCH_HOST}
+      - OPENSEARCH_USER=${OPENSEARCH_USER}
+      - OPENSEARCH_PASS=${OPENSEARCH_PASS}
+      - VECTOR_INDEX=${VECTOR_INDEX:-issue-edge-cases}
+      - GITHUB_WEBHOOK_SECRET=${GITHUB_WEBHOOK_SECRET}
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+      - ENABLE_NGROK=true
+    restart: unless-stopped 

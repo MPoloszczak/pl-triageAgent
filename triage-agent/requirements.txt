@@ -1,0 +1,7 @@
+langgraph>=0.5.0
+flask
+requests
+openai>=1.93.0
+python-dotenv
+langsmith>=0.4.4
+ngrok>=1.4.0

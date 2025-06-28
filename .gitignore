@@ -1,0 +1,51 @@
+# Git metadata
+.git/
+
+# CI config
+.github/
+
+# Environment & secrets
+.env
+.env.*
+
+# IDE/editor settings
+.idea/
+.vscode/
+*.code-workspace
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Packaging / build outputs
+dist/
+build/
+.eggs/
+*.egg-info/
+
+# Caches & logs
+.mypy_cache/
+.pytest_cache/
+.cache/
+.coverage*
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+.venv/
+venv/
+
+# Certificates/keys
+*.pem
+*.key
+*.crt
+
+.env.example
+
+.env
